@@ -1,0 +1,18 @@
+{
+  "name": "x-delete",
+  "version": "1.0.0",
+  "description": "Playwright tools for cleaning posts, replies, and reposts from the signed-in X account.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --check scripts/x-delete-playwright.js && node --check scripts/x-delete-replies.js && node --check scripts/x-delete-reposts.js && bash -n start.sh",
+    "posts": "node scripts/x-delete-playwright.js --mode=posts",
+    "replies": "node scripts/x-delete-playwright.js --mode=replies",
+    "reposts": "node scripts/x-delete-playwright.js --mode=reposts",
+    "playwright": "./start.sh"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.63.0"
+  }
+}
